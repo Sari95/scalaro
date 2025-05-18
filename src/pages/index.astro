@@ -1,0 +1,67 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+const title = "Startseite";
+---
+
+<BaseLayout title={title}>
+  <Hero />
+
+  <!-- Abschnitt: Über mich -->
+  <section class="bg-white py-20 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <!-- Bild -->
+      <div class="flex justify-center">
+        <img src="/images/portrait.jpg" alt="Portrait Sarah" class="rounded-2xl max-w-sm w-full"
+       style="box-shadow: 6px 6px 15px #3E7A6F;" />
+      </div>
+
+      <!-- Text -->
+      <div>
+        <h2 class="text-3xl font-display font-semibold mb-4">Hallo, ich bin Sarah.</h2>
+        <p class="text-gray-700 text-base leading-relaxed mb-4">
+          Ich unterstütze datengetriebene Organisationen dabei, Python-Anwendungen zu entwickeln, die wirklich genutzt werden – mit einem Gespür für Businesslogik, klare Kommunikation und technische Umsetzbarkeit.
+        </p>
+        <p class="text-gray-700 text-base leading-relaxed">
+          Meine Erfahrung im Bereich Data Science und Automatisierung verdanke ich dem Wirtschaftsinformatikstudium an der Berner Fachhochschule sowie der Arbeit bei Artd Webdesign GmbH, Nexell GmbH und als wissenschaftliche Mitarbeiterin an der Berner Fachhochschule mit der Zuständigkeit für ein Python-Autopreisberechnungsprojekt. Aktuell vertiefe ich mein Know-how im Data-Science-Master an der ZHAW.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Abschnitt: Artikel -->
+<section class="bg-light py-20 px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-display font-semibold mb-6">Projekte & Artikel</h2>
+    <p class="text-lg text-gray-700 mb-12">Eine Auswahl meiner Veröffentlichungen auf Medium und Towards Data Science</p>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Artikel 1 -->
+      <a href="https://medium.com/data-science-collective/rag-in-action-build-your-own-local-pdf-chatbot-as-a-beginner-96c2833869ff?sk=8c7de9efe27d363fbe968bf7248879cf" target="_blank" rel="noopener noreferrer" class="group relative block rounded-2xl shadow-xl overflow-hidden">
+        <img src="/images/articles/PDF-Chatbot-with-RAG.png" alt="RAG in Action: Build your Own Local PDF Chatbot as a Beginner" class="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-primary bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <p class="text-white text-lg font-semibold px-4 text-center">RAG in Action: Build your Own Local PDF Chatbot as a Beginner</p>
+        </div>
+      </a>
+
+<!-- Artikel 2 -->
+<a href="https://towardsdatascience.com/how-to-make-your-llm-more-accurate-with-rag-fine-tuning/" target="_blank" rel="noopener noreferrer" class="group relative block rounded-2xl shadow-xl overflow-hidden">
+  <img src="/images/articles/Optimizing_LLM_with_RAG-FineTuning.png" alt="How to Make Your LLM More Accurate with RAG & Fine-Tuning" class="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105" />
+  <div class="absolute inset-0 bg-primary bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+    <p class="text-white text-lg font-semibold px-4 text-center">How to Make Your LLM More Accurate with RAG & Fine-Tuning</p>
+  </div>
+</a>
+
+      <!-- Artikel 3 -->
+      <a href="https://medium.com/data-science-collective/visualize-your-spotify-data-with-python-and-streamlit-4d4c46bbd39e?sk=12cb785242472daf6d77d024a90ad57c" target="_blank" rel="noopener noreferrer" class="group relative block rounded-2xl shadow-xl overflow-hidden">
+        <img src="/images/articles/Python-Streamlit-App.png" alt="Visualize Your Spotify Data with Python and Streamlit" class="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-primary bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <p class="text-white text-lg font-semibold px-4 text-center">Visualize Your Spotify Data with Python and Streamlit</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Impressum";
+---
+
+<BaseLayout title={title}>
+  <section class="bg-light text-dark py-20 px-6">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+      <!-- Linke Spalte -->
+      <div>
+        <h1 class="text-4xl font-display font-semibold mb-6">Impressum</h1>
+        <p class="mb-1">Scalaro Python Solutions</p>
+        <p class="mb-1">Fabrikstrasse 27</p>
+        <p class="mb-4">3012 Bern</p>
+        <a href="mailto:schuerch.sarah@gmail.com" class="text-primary hover:underline font-medium">
+          → schuerch.sarah@gmail.com
+        </a>
+      </div>
+
+      <!-- Rechte Spalte -->
+      <div class="text-sm space-y-4">
+        <div>
+          <p class="font-semibold">Verantwortlich für den Inhalt dieser Website</p>
+          <p>Sarah Schürch</p>
+        </div>
+        <div>
+          <p class="font-semibold">Konzept | Design | Umsetzung</p>
+          <p>Sarah Schürch, 2025</p>
+        </div>
+        <div>
+          <p class="font-semibold">Fotos</p>
+          <p>© <a href="https://branding-fotografie.ch/" class="text-primary hover:underline">Manuel Castellote</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
