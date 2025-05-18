@@ -5,4 +5,7 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
+  site: 'https://sari95.github.io/scalaro',
+  base: '/scalaro/',
+  output: 'static',
 });
