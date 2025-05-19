@@ -1,4 +1,5 @@
 ---
+const { title = "Scalaro Python Solutions" } = Astro.props;
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
@@ -8,7 +9,7 @@ import "../styles/global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><slot name="title">Meine Data App Seite</slot></title>
+    <title>{title}</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   </head>
   <body class="font-sans bg-light text-dark">
