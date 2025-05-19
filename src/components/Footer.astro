@@ -1,3 +1,7 @@
+---
+import { Astro } from 'astro';
+---
+
 <footer class="bg-white text-dark border-t border-gray-200">
   <div class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8">
     <div class="flex flex-col space-y-2">
@@ -19,7 +23,7 @@
       <p class="text-right">
         © 2025 Scalaro Python Solutions&nbsp;
         <span class="text-primary">×</span>
-        &nbsp;<a href="/impressum" class="hover:underline">Impressum</a>
+        &nbsp;<a href={`${Astro.site.pathname}impressum`} class="hover:underline">Impressum</a>
       </p>
     </div>
   </div>
