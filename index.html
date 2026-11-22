@@ -621,6 +621,32 @@
     color: var(--text-mid);
   }
 
+  .demo-cta {
+    margin-top: 3rem;
+    padding: 2rem 2.5rem;
+    background: var(--navy);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .demo-cta h3 {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 0.3rem;
+  }
+
+  .demo-cta p {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.6);
+    max-width: 520px;
+  }
+
   .story-tag {
     display: inline-block;
     font-size: 0.72rem;
@@ -821,6 +847,7 @@
     .process-steps { grid-template-columns: repeat(2, 1fr); }
     .process-steps::before { display: none; }
     .story-head { display: none; }
+    .demo-cta { padding: 1.5rem 1.25rem; }
     .story-row { grid-template-columns: 1fr; gap: 0.75rem; }
     .story-row .before::before { content: 'Heute: '; font-weight: 500; }
     .story-row .after::before { content: 'Mit Assistent: '; font-weight: 500; color: var(--teal); }
@@ -1112,6 +1139,15 @@
       <span class="story-tag">Mahnungen</span>
       <span class="story-tag">Anfragen von Mietparteien</span>
       <span class="story-tag">Vertragsfristen</span>
+    </div>
+    <!-- Demo-Button: verlinkt vorerst auf eine E-Mail, später auf ein Formular -->
+    <div class="demo-cta">
+      <div>
+        <h3>Lieber sehen als lesen?</h3>
+        <p>In einer kurzen Demo zeige ich Ihnen den Assistenten aus meinem Pilotprojekt,
+        an einem Beispiel mit Musterdaten.</p>
+      </div>
+      <a href="mailto:schuerch.sarah@gmail.com?subject=Demo%20des%20KI-Assistenten&amp;body=Guten%20Tag%20Frau%20Sch%C3%BCrch%2C%0D%0A%0D%0Aich%20m%C3%B6chte%20gerne%20eine%20Demo%20des%20KI-Assistenten%20sehen.%0D%0A%0D%0A" class="btn-primary">Ich möchte eine Demo sehen</a>
     </div>
   </div>
 </section>
