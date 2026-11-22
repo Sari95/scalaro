@@ -450,6 +450,32 @@
 
   .check-item:last-child::after { display: none; }
 
+  /* Zwei Gruppen: Kann er es (1 bis 3) und Lohnt es sich (4 und 5) */
+  .check-groups {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    margin-top: 3rem;
+    margin-bottom: -2rem;
+  }
+
+  .check-groups span {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    padding: 0 0 0.75rem 1.5rem;
+  }
+
+  .check-item:nth-child(3) { border-right: 1px solid rgba(90,158,146,0.6); }
+  .check-item:nth-child(3)::after { display: none; }
+
+  .check-note {
+    margin-top: 1.5rem;
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.55);
+    max-width: 640px;
+  }
+
   .check-icon {
     width: 2.5rem;
     height: 2.5rem;
@@ -782,6 +808,7 @@
     .problem-grid { grid-template-columns: 1fr; }
     .services-grid { grid-template-columns: 1fr; }
     .check-grid { grid-template-columns: repeat(2, 1fr); gap: 1px; }
+    .check-groups { display: none; }
     .check-item::after { display: none; }
     .process-steps { grid-template-columns: repeat(2, 1fr); }
     .process-steps::before { display: none; }
@@ -943,34 +970,40 @@
   <div class="section-inner">
     <p class="section-label" style="color: var(--teal);">Quick Check</p>
     <h2 style="color: var(--white);">Passt Ihr Ablauf <em>für einen Assistenten?</em></h2>
-    <p class="lead">Fünf Fragen für einen ersten Eindruck. Je öfter Sie mit Ja antworten, desto mehr kann ein Assistent übernehmen.</p>
+    <p class="lead">Fünf Fragen für einen ersten Eindruck. Die ersten drei zeigen, ob ein Assistent die Arbeit übernehmen kann, die letzten zwei, ob es sich für Sie lohnt.</p>
+    <div class="check-groups">
+      <span>Kann ein Assistent das?</span>
+      <span>Lohnt es sich?</span>
+    </div>
     <div class="check-grid">
+      <div class="check-item">
+        <div class="check-icon">📄</div>
+        <h4>Schriftlich vorhanden?</h4>
+        <p>Liegen die Angaben als Dokument, E-Mail, Scan oder lesbares Foto vor und nicht nur im Kopf oder am Telefon?</p>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">📋</div>
+        <h4>Nach festen Regeln?</h4>
+        <p>Folgt die Arbeit einem Schema, etwa einem Verteilschlüssel oder einer Frist, und braucht sie kaum Ermessen?</p>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">✅</div>
+        <h4>Prüfbar?</h4>
+        <p>Können Sie das Ergebnis vor dem Versand kontrollieren und freigeben?</p>
+      </div>
       <div class="check-item">
         <div class="check-icon">🔁</div>
         <h4>Wiederkehrend?</h4>
         <p>Fällt die Arbeit jeden Monat oder jedes Jahr wieder an?</p>
       </div>
       <div class="check-item">
-        <div class="check-icon">📋</div>
-        <h4>Nach Schema?</h4>
-        <p>Folgt sie festen Regeln, zum Beispiel einem Verteilschlüssel oder einer Frist?</p>
-      </div>
-      <div class="check-item">
-        <div class="check-icon">📄</div>
-        <h4>Voller Belege?</h4>
-        <p>Stecken die Angaben in PDFs, Scans oder Handyfotos? Die liest der Assistent für Sie.</p>
-      </div>
-      <div class="check-item">
         <div class="check-icon">⏱️</div>
         <h4>Zeitfresser?</h4>
-        <p>Kostet sie Sie jedes Mal Stunden oder einen ganzen Abend?</p>
-      </div>
-      <div class="check-item">
-        <div class="check-icon">✅</div>
-        <h4>Prüfbar?</h4>
-        <p>Können Sie das Ergebnis vor dem Versand mit einem Blick kontrollieren?</p>
+        <p>Kostet sie Sie jedes Mal Stunden?</p>
       </div>
     </div>
+    <p class="check-note">Wo Ermessen, Verhandlung oder eine rechtliche Beurteilung gefragt ist,
+    bereitet der Assistent vor, und die Entscheidung bleibt bei Ihnen.</p>
   </div>
 </section>
 
