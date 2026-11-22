@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQESURBVHgB7ZtNSFRRFMfPlFaCRbmaSeiLmUBDyAKLzITajKsW2cY2hS0FVy4siDbRolXgMnETQSS0y9kkiFYwUEqCBkpRYUqBBgm2q/d/zhmPUuO8N+feN8N7P3g4b3gOc//33PN178Qu3Or9QyFmB4WcSAAKOZEAFHIiASjkhF6AKjJI7Z4aSp9qobbGJoofqKP4/jr3/fnFBfcaeZelqU/zFCQxU5ngyaNJ6u/syg/6f0CI248HaennMgWBkSVw41KaHt7s2XbwIJmod5/F3yBQXwLnG5ro+sV0/n719xqNvM3S/NICLa2szzIG23ws6T4LsDzuXeum3kcD1i1BfQk87buzaa0XMm8MXFoK/AFEsInqEoDDk4PvHnhQcEZhEXLW4Tdw2URVgA5HAAYzXwwQ4f7wk/x9WnyGDVQF4Nkbn532tJZh+hwOETJtoiaA9OJTH73H9vGZafcvcgebEUFNAHxxBuvfKzIhSsYrUAB49FLgEKnxWV5QE2B1bY1KAflCEOgJIAYgl0O5oyaA9Pq2Y3kp6AngrGG2go7TLb6sACLisrkcdh5uO3uXlKir3UcnDh2hXVXVtLu6mrJzHzz9//DrMfea+fqZbKGaCA2/Gcu/7jzX7laF5Y6qBcB0cZ053uDewxcgPcZ7fnIDG6gKAGC+CSeOczZXW1PjprcQIuEUSl9+fA8s5P0LdQHAxOx6Wouan4EQjY5/uNrann8fuUPQYhgRACC1zUxmKeVYwtbMDvewClx7HWGC7AsaEwBgdjOi8ZnaUuTAKthP4Jnl1V9kG6MCMIjtWBawCDhDzLq0CghxuaXVfc62s7QiAMPRAFYBMZAsSauAbxh9P1m5iZAXMMiJXOMkdbDeFQMJFF5DIFsEvjOEwaIvyLNuuy+oJgB/8WL2AraCOmLoZSZ/z+1yG6gJgPY2Lr9NTVgCWwGWgS3KZnMUg+deoh8r8ou6AKW0sxZzbbGKbIlpbGkFkRar9wRTJbS0g2ilqQkwl8vgUAX6HUgiZ/qyQ2waNQFkCut3YyOZ8/42d4jVBOASGPjpBMkcYu6bvXpAtSnKVZ+fbE6KJsU0jWoYfPZqoyfYf6Wr6HiOwbNgUkgbqAqAmeMvz4cftssMMXh5omRoNEM2UT8hgoEP9vRtigQQBbu/7CjdMthxePJABYAFDbx4TjYxckqMDz55CYcQCYcqbCdDRmqBYo7HSDDzsiSWQERUh6bqg5jpX4zAucHUkSFyfsCdoUmn+EEVWOgQFS8nOEeIqm0hRk+KAnn8xSvp5o09xnhur0E7QpT1WWE5WFiAiYZprNx/NIWZxzKacKKICQdpfAmUCmY+s2KuSRr9XoBCTiQAhZxIAAo5kQAUckIvwF+sk8xReiC1IgAAAABJRU5ErkJggg==">
-<title>Scalaro – Intelligente Automatisierung für die Liegenschaftsverwaltung</title>
+<title>Scalaro | KI-Assistent für die Liegenschaftsverwaltung</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -26,6 +26,9 @@
   }
 
   html { scroll-behavior: smooth; }
+
+  /* Lange deutsche Wörter (Liegenschaftsverwaltung) auf dem Handy trennen statt überlaufen lassen */
+  h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 
   body {
     font-family: var(--sans);
@@ -341,7 +344,7 @@
 
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 3rem;
   }
@@ -532,68 +535,74 @@
     line-height: 1.65;
   }
 
-  /* USECASES */
-  .usecases { background: var(--white); }
+  /* BEISPIEL (vorher / nachher) */
+  .story-section { background: var(--white); }
 
-  .uc-grid {
+  .story { margin-top: 3rem; }
+
+  .story-head, .story-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr 2fr;
     gap: 1.5rem;
-    margin-top: 3rem;
+    align-items: start;
   }
 
-  .uc-card {
-    background: var(--cream);
-    padding: 2rem;
-    border-radius: 1rem;
-    border-left: 3px solid var(--teal);
-    transition: transform 0.2s;
-  }
-
-  .uc-card:hover { transform: translateY(-3px); }
-
-  .uc-saving {
-    font-family: var(--serif);
-    font-size: 2rem;
-    font-weight: 400;
-    color: var(--teal);
-    display: block;
-    margin-bottom: 0.25rem;
-  }
-
-  .uc-saving-label {
-    font-size: 0.7rem;
+  .story-head {
+    padding-bottom: 0.75rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
     color: var(--text-light);
-    display: block;
-    margin-bottom: 1.25rem;
   }
 
-  .uc-card h3 {
+  .story-head .col-after { color: var(--teal); }
+
+  .story-row {
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--cream-dark);
+  }
+
+  .story-row h3 {
     font-family: var(--serif);
     font-size: 1.15rem;
     font-weight: 400;
-    margin-bottom: 0.6rem;
     color: var(--text-dark);
   }
 
-  .uc-card p {
-    font-size: 0.85rem;
+  .story-row .before {
+    font-size: 0.88rem;
     color: var(--text-mid);
     line-height: 1.65;
   }
 
-  .uc-tag {
+  .story-row .after {
+    font-size: 0.88rem;
+    color: var(--text-dark);
+    line-height: 1.65;
+    background: var(--cream);
+    border-left: 3px solid var(--teal);
+    padding: 0.9rem 1.1rem;
+    border-radius: 0 0.6rem 0.6rem 0;
+  }
+
+  .story-more {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.88rem;
+    color: var(--text-mid);
+  }
+
+  .story-tag {
     display: inline-block;
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
     background: rgba(62,122,111,0.1);
     color: var(--teal);
-    padding: 0.2rem 0.6rem;
+    padding: 0.25rem 0.75rem;
     border-radius: 1rem;
-    margin-top: 1rem;
   }
 
   /* ABOUT */
@@ -649,6 +658,27 @@
     line-height: 1.85;
     margin-bottom: 1.5rem;
   }
+
+  .about-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-family: var(--serif);
+    font-size: 1rem;
+    color: var(--teal-light);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+  }
+
+  .about-link:hover { color: var(--white); }
+
+  .footer-links a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    margin-left: 1.25rem;
+  }
+
+  .footer-links a:hover { color: var(--teal-light); }
 
   .about-badges {
     display: flex;
@@ -755,7 +785,10 @@
     .check-item::after { display: none; }
     .process-steps { grid-template-columns: repeat(2, 1fr); }
     .process-steps::before { display: none; }
-    .uc-grid { grid-template-columns: 1fr; }
+    .story-head { display: none; }
+    .story-row { grid-template-columns: 1fr; gap: 0.75rem; }
+    .story-row .before::before { content: 'Heute: '; font-weight: 500; }
+    .story-row .after::before { content: 'Mit Assistent: '; font-weight: 500; color: var(--teal); }
     .about-inner { grid-template-columns: 1fr; gap: 2rem; }
 
     footer { flex-direction: column; gap: 0.5rem; text-align: center; }
@@ -771,7 +804,7 @@
     <li><a href="#problem">Problem</a></li>
     <li><a href="#leistungen">Leistungen</a></li>
     <li><a href="#prozess">Vorgehen</a></li>
-    <li><a href="#usecases">Use Cases</a></li>
+    <li><a href="#beispiel">Beispiel</a></li>
     <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
   </ul>
 </nav>
@@ -780,34 +813,33 @@
 <section class="hero" id="top">
   <div class="hero-inner">
     <div class="hero-left">
-      <p class="hero-eyebrow">Intelligente Automatisierung</p>
-      <h1>Liegenschaftsverwaltung — <em>endlich ohne Reibung</em></h1>
+      <p class="hero-eyebrow">KI-Assistent für die Liegenschaftsverwaltung</p>
+      <h1>Liegenschaftsverwaltung mit KI-Assistent, <em>ohne teure Fachsoftware</em></h1>
       <p class="hero-sub">
-        Repetitive Prozesse kosten Ihre Verwaltung täglich wertvolle Stunden. 
-        Scalaro identifiziert Automatisierungspotenziale gemeinsam mit Ihnen und setzt sie gezielt um — 
-        mit moderner KI, RPA und klarer Strategie.
+        Sie legen die Belege ab. Der Assistent erledigt die Arbeit. Sie entscheiden, was hinausgeht.
+        Für kleine Verwaltungen und für Eigentümerinnen und Eigentümer, die ihre Liegenschaften selbst verwalten.
       </p>
       <div>
-        <a href="#kontakt" class="btn-primary">Gespräch vereinbaren</a>
+        <a href="#kontakt" class="btn-primary">Kostenloses Erstgespräch</a>
         <a href="#leistungen" class="btn-outline">Leistungen</a>
       </div>
     </div>
     <div class="hero-stats">
       <div class="stat">
-        <span class="stat-num">Deutliche</span>
-        <span class="stat-label">Zeitersparnis</span>
+        <span class="stat-num">Ihre Belege</span>
+        <span class="stat-label">PDF, Scan oder Foto genügt</span>
       </div>
       <div class="stat">
-        <span class="stat-num">Höhere</span>
-        <span class="stat-label">Mitarbeiterzufriedenheit</span>
+        <span class="stat-num">Jede Zahl</span>
+        <span class="stat-label">fest gerechnet und bis zum Beleg nachvollziehbar</span>
       </div>
       <div class="stat">
-        <span class="stat-num">ROI</span>
-        <span class="stat-label">Bereits im ersten Jahr</span>
+        <span class="stat-num">Ihr Okay</span>
+        <span class="stat-label">Nichts geht ohne Ihre Freigabe hinaus</span>
       </div>
       <div class="stat">
-        <span class="stat-num">Weniger Fehler</span>
-        <span class="stat-label">durch regelbasierte Bots</span>
+        <span class="stat-num">Ihre Daten</span>
+        <span class="stat-label">in einem quelloffenen CRM, das Ihnen gehört</span>
       </div>
     </div>
   </div>
@@ -817,36 +849,39 @@
 <section class="problem" id="problem">
   <div class="section-inner">
     <p class="section-label">Das Problem</p>
-    <h2>Die Verwaltung ist <em>manuell überlastet</em></h2>
+    <h2>Viel Handarbeit, <em>keine passende Software</em></h2>
     <p class="lead">
-      Liegenschaftsverwaltungen arbeiten mit hohem Volumen, komplexen Abläufen und 
-      fragmentierten Systemen — das kostet täglich Stunden, die für wertschöpfende 
-      Arbeit fehlen.
+      Wer wenige Liegenschaften verwaltet, erledigt vieles noch von Hand.
+      Die grossen Verwaltungsprogramme sind für andere gebaut. Die Arbeit bleibt
+      an Excel, Ordnern und langen Abenden hängen.
     </p>
     <div class="problem-grid">
       <div class="problem-card" data-num="01">
         <svg class="problem-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
         </svg>
-        <h3>Manuelle Dateneingabe</h3>
-        <p>Mietverträge, Nebenkosten, Korrespondenz — alles wird manuell 
-        erfasst und zwischen Systemen kopiert. Fehler und Doppelarbeit sind vorprogrammiert.</p>
+        <h3>Belege aus allen Richtungen</h3>
+        <p>Die Stromrechnung kommt aus dem Online-Portal, die Heizungsfirma schickt
+        einen Scan, die Zählerstände kommen als Handyfoto. Am Ende tippt jemand
+        jede Zahl von Hand ins Excel.</p>
       </div>
       <div class="problem-card" data-num="02">
         <svg class="problem-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          <path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
         </svg>
-        <h3>Zeitaufwändige Routine</h3>
-        <p>Mahnwesen, Abrechnungen, Dokumentenversand — diese Aufgaben 
-        binden qualifizierte Mitarbeitende in repetitiver Arbeit statt in strategischen Tätigkeiten.</p>
+        <h3>Fachsoftware lohnt sich nicht</h3>
+        <p>Professionelle Verwaltungssoftware ist für grosse Portfolios gebaut.
+        Lizenzen und Einführung rechnen sich bei wenigen Liegenschaften kaum,
+        also bleibt es beim Excel.</p>
       </div>
       <div class="problem-card" data-num="03">
         <svg class="problem-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
         </svg>
-        <h3>Fehlende Skalierbarkeit</h3>
-        <p>Wächst das Portfolio, wächst proportional auch der administrative Aufwand — 
-        ohne Automatisierung wird jedes neue Objekt zur Belastung statt zur Chance.</p>
+        <h3>Das Wissen steckt in einem Kopf</h3>
+        <p>Welcher Verteilschlüssel für welche Wohnung gilt und wie die Abrechnung
+        genau entsteht, weiss oft nur eine Person. Fällt sie aus, wartet die
+        ganze Abrechnung.</p>
       </div>
     </div>
   </div>
@@ -858,57 +893,45 @@
     <p class="section-label">Leistungen</p>
     <h2>Was Scalaro für Sie <em>konkret leistet</em></h2>
     <p class="lead">
-      Von der Prozessanalyse bis zur laufenden Optimierung — 
-      ich begleite den gesamten Automatisierungsweg mit technischer Tiefe 
-      und unternehmerischem Blick.
+      Vom ersten Überblick bis zum Assistenten, der im Alltag mitarbeitet.
+      Ich fange klein an und begleite Sie Schritt für Schritt.
     </p>
     <div class="services-grid">
       <div class="service-card">
         <span class="service-tag">Analyse</span>
-        <h3>Prozess-Assessment &amp; Potenzialanalyse</h3>
-        <p>Welche Abläufe lohnen sich für Automatisierung? Ich analysiere Ihre 
-        Prozesse systematisch mit Hilfe von Process Mining und strukturierten Interviews 
-        und identifiziere Quick Wins mit maximalem ROI.</p>
+        <h3>Prozess-Check</h3>
+        <p>Welche Abläufe kann ein Assistent ganz übernehmen, wo hilft er mit,
+        und wo bleibt die Arbeit besser bei Ihnen? Sie erhalten eine ehrliche
+        Einschätzung, auch dort, wo sich Automatisierung nicht lohnt.</p>
         <ul class="service-list">
-          <li>Prozessaufnahme und Dokumentation</li>
-          <li>ROI-Berechnung und Priorisierung</li>
-          <li>Automatisierungs-Roadmap</li>
+          <li>Aufnahme Ihrer Abläufe und Unterlagen</li>
+          <li>Einstufung: voll, teilweise oder nicht automatisierbar</li>
+          <li>Empfehlung, womit Sie anfangen</li>
         </ul>
       </div>
       <div class="service-card">
-        <span class="service-tag">Umsetzung</span>
-        <h3>RPA &amp; Intelligent Document Processing</h3>
-        <p>Automatisierung von dokumentenintensiven Prozessen wie Mietvertrags-
-        verarbeitung, Nebenkostenabrechnungen und Korrespondenz mit 
-        KI-gestützter Dokumentenextraktion (IDP/OCR).</p>
+        <span class="service-tag">Einrichtung</span>
+        <h3>Ihr Assistent für den ersten Prozess</h3>
+        <p>Wir starten mit einem Ablauf, der jedes Jahr viel Zeit kostet, zum
+        Beispiel der Heiz- und Nebenkostenabrechnung. Ich hinterlege Ihre
+        Verteilschlüssel, Vorlagen und Abläufe, damit der Assistent so arbeitet,
+        wie Sie es heute tun.</p>
         <ul class="service-list">
-          <li>Bot-Entwicklung für CRM und Portale</li>
-          <li>Intelligente Dokument-Extraktion</li>
-          <li>E-Mail-Verarbeitung und Weiterleitung</li>
+          <li>Stammdaten in einem quelloffenen CRM</li>
+          <li>Ihr Rechenweg, fest hinterlegt und geprüft</li>
+          <li>Freigabe durch Sie vor jedem Versand</li>
         </ul>
       </div>
       <div class="service-card">
-        <span class="service-tag">KI-Integration</span>
-        <h3>Agentic AI für komplexe Entscheidungen</h3>
-        <p>Über einfache Regelautomation hinaus: KI-Agenten, die kontextbasiert 
-        entscheiden können — für Anfragetriage, Mieterkorrespondenz 
-        oder Schadensabwicklung.</p>
+        <span class="service-tag">Ausbau</span>
+        <h3>Weitere Prozesse und Begleitung</h3>
+        <p>Läuft der erste Prozess, kommen die nächsten dazu, etwa Mieterwechsel,
+        Mahnungen oder Anfragen von Mietparteien. Ändern sich Ihre Liegenschaften
+        oder Abläufe, passe ich den Assistenten an oder schule Sie.</p>
         <ul class="service-list">
-          <li>LLM-gestützte Entscheidungsprozesse</li>
-          <li>Chatbots für Mieter-Self-Service</li>
-          <li>Intelligente Priorisierung und Routing</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <span class="service-tag">Governance</span>
-        <h3>Betrieb, Monitoring &amp; Weiterentwicklung</h3>
-        <p>Automatisierung ist kein Einmal-Projekt. Ich richte Governance-Strukturen 
-        ein, überwache die laufenden Bots und entwickle das System 
-        kontinuierlich weiter.</p>
-        <ul class="service-list">
-          <li>KPI-Tracking und Dashboards</li>
-          <li>Incident Management</li>
-          <li>Laufende Optimierung</li>
+          <li>Neue Prozesse Schritt für Schritt</li>
+          <li>Anpassung an neue Perioden und Mietverhältnisse</li>
+          <li>Eine feste Ansprechperson für Ihre Fragen</li>
         </ul>
       </div>
     </div>
@@ -919,33 +942,33 @@
 <section class="quickcheck">
   <div class="section-inner">
     <p class="section-label" style="color: var(--teal);">Quick Check</p>
-    <h2 style="color: var(--white);">Ist Ihr Prozess <em>bereit für Automation?</em></h2>
-    <p class="lead">Fünf Fragen, die zeigen, ob sich Automatisierung lohnt.</p>
+    <h2 style="color: var(--white);">Passt Ihr Ablauf <em>für einen Assistenten?</em></h2>
+    <p class="lead">Fünf Fragen für einen ersten Eindruck. Je öfter Sie mit Ja antworten, desto mehr kann ein Assistent übernehmen.</p>
     <div class="check-grid">
       <div class="check-item">
         <div class="check-icon">🔁</div>
-        <h4>Repetitiv?</h4>
-        <p>Wird die Aufgabe täglich oder mehrmals wöchentlich identisch ausgeführt?</p>
+        <h4>Wiederkehrend?</h4>
+        <p>Fällt die Arbeit jeden Monat oder jedes Jahr wieder an?</p>
       </div>
       <div class="check-item">
         <div class="check-icon">📋</div>
-        <h4>Regelbasiert?</h4>
-        <p>Gibt es klare Wenn-dann-Logik ohne subjektives Ermessen?</p>
+        <h4>Nach Schema?</h4>
+        <p>Folgt sie festen Regeln, zum Beispiel einem Verteilschlüssel oder einer Frist?</p>
       </div>
       <div class="check-item">
         <div class="check-icon">📄</div>
-        <h4>Digital lesbar?</h4>
-        <p>Liegen Inputs als strukturierte oder maschinell lesbare Daten vor?</p>
+        <h4>Voller Belege?</h4>
+        <p>Stecken die Angaben in PDFs, Scans oder Handyfotos? Die liest der Assistent für Sie.</p>
       </div>
       <div class="check-item">
-        <div class="check-icon">⚙️</div>
-        <h4>Stabil?</h4>
-        <p>Wenige Ausnahmen und kaum manuelle Eingriffe nötig?</p>
+        <div class="check-icon">⏱️</div>
+        <h4>Zeitfresser?</h4>
+        <p>Kostet sie Sie jedes Mal Stunden oder einen ganzen Abend?</p>
       </div>
       <div class="check-item">
-        <div class="check-icon">📦</div>
-        <h4>Volumenreich?</h4>
-        <p>Werden hohe Mengen gleichartiger Fälle verarbeitet?</p>
+        <div class="check-icon">✅</div>
+        <h4>Prüfbar?</h4>
+        <p>Können Sie das Ergebnis vor dem Versand mit einem Blick kontrollieren?</p>
       </div>
     </div>
   </div>
@@ -955,103 +978,99 @@
 <section class="process" id="prozess">
   <div class="section-inner">
     <p class="section-label">Vorgehen</p>
-    <h2>Vom ersten Gespräch zur <em>laufenden Automation</em></h2>
+    <h2>Vom ersten Gespräch zum <em>laufenden Assistenten</em></h2>
     <p class="lead">
-      Strukturiert, transparent und auf Ihre Situation zugeschnitten.
+      Klein anfangen, mit Ihren echten Unterlagen prüfen, dann ausbauen.
     </p>
     <div class="process-steps">
       <div class="step">
         <div class="step-num">01</div>
-        <h3>Discovery &amp; Analyse</h3>
-        <p>Gemeinsame Prozessaufnahme, Identifikation von Automatisierungspotenzialen, 
-        erste ROI-Schätzung und Priorisierung der Use Cases.</p>
+        <h3>Erstgespräch</h3>
+        <p>Sie erzählen, wo die meiste Zeit hineinfliesst. Nach 30 Minuten wissen
+        wir, ob und wo ein Assistent Ihnen Arbeit abnimmt.</p>
       </div>
       <div class="step">
         <div class="step-num">02</div>
-        <h3>Konzept &amp; Design</h3>
-        <p>Detaillierte Prozessdokumentation (AS-IS / TO-BE), Lösungsdesign 
-        mit Stakeholder-Abstimmung und Freigabe durch den Prozessverantwortlichen.</p>
+        <h3>Prozess-Check</h3>
+        <p>Ich schaue mir Ihre Abläufe und Unterlagen an und stufe sie ein: voll,
+        teilweise oder nicht automatisierbar. Gemeinsam wählen wir den ersten Prozess.</p>
       </div>
       <div class="step">
         <div class="step-num">03</div>
-        <h3>Entwicklung &amp; Test</h3>
-        <p>Agile Entwicklung, Code-Review, strukturiertes User-Acceptance-Testing 
-        (UAT) und iterative Anpassung basierend auf Feedback.</p>
+        <h3>Einrichtung und Probelauf</h3>
+        <p>Ich richte den Assistenten ein und teste ihn mit Ihren Belegen der letzten
+        Periode. Sie vergleichen das Ergebnis mit Ihrer bisherigen Abrechnung.</p>
       </div>
       <div class="step">
         <div class="step-num">04</div>
-        <h3>Go-Live &amp; Betrieb</h3>
-        <p>Kontrolliertes Deployment, Hypercare-Phase, kontinuierliches Monitoring 
-        und KPI-Tracking zur Messung des realisierten Nutzens.</p>
+        <h3>Im Alltag</h3>
+        <p>Sie legen die Belege ab, der Assistent bereitet vor, Sie geben frei.
+        Ich bleibe Ihre Ansprechperson und baue aus, wenn Sie mehr wollen.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- USE CASES -->
-<section class="usecases" id="usecases">
+<!-- BEISPIEL -->
+<section class="story-section" id="beispiel">
   <div class="section-inner">
-    <p class="section-label">Use Cases</p>
-    <h2>Konkrete Beispiele aus der <em>Liegenschaftsverwaltung</em></h2>
+    <p class="section-label">Beispiel</p>
+    <h2>Die Nebenkostenabrechnung, <em>vorher und nachher</em></h2>
     <p class="lead">
-      Typische Prozesse, die sich mit Scalaro automatisieren lassen — 
-      und was sie einsparen können.
+      Einmal im Jahr, und jedes Mal ein Wochenende weg. So sieht dieselbe Arbeit aus,
+      wenn ein Assistent mitarbeitet.
     </p>
-    <div class="uc-grid">
-      <div class="uc-card">
-        <span class="uc-saving">Klare</span>
-        <span class="uc-saving-label">Zeitersparnis</span>
-        <h3>Nebenkostenabrechnung</h3>
-        <p>Automatisches Zusammenführen von Verbrauchsdaten aus verschiedenen Quellen, 
-        Berechnung und Erstellung der Abrechnungen sowie versandfertige 
-        PDF-Erstellung pro Mieter.</p>
-        <span class="uc-tag">RPA + Excel</span>
+    <div class="story">
+      <div class="story-head">
+        <span>Schritt</span>
+        <span>Heute</span>
+        <span class="col-after">Mit Assistent</span>
       </div>
-      <div class="uc-card">
-        <span class="uc-saving">Weniger</span>
-        <span class="uc-saving-label">Bearbeitungszeit</span>
-        <h3>Eingangsrechnungen &amp; Belege</h3>
-        <p>OCR-gestützte Extraktion von Rechnungsfeldern, automatische 
-        Zuweisung zu Kostenstellen und Liegenschaften, Plausibilitätsprüfung 
-        und Buchungsvorbereitung.</p>
-        <span class="uc-tag">IDP/OCR + RPA</span>
+      <div class="story-row">
+        <h3>Belege sammeln</h3>
+        <p class="before">Rechnungen aus dem Portal, Scans per Post, Zählerstände als
+        Fotos im Chat. Alles liegt verstreut in verschiedenen Ordnern.</p>
+        <p class="after">Sie legen alles in einen Eingang, als PDF, Scan oder Foto.
+        Der Assistent erkennt, was es ist, und liest die Beträge aus. Wenn Sie möchten,
+        binden wir später auch Ihr E-Mail-Postfach an. Dann landen Rechnungen ganz
+        von selbst im Eingang.</p>
       </div>
-      <div class="uc-card">
-        <span class="uc-saving">automatisierte</span>
-        <span class="uc-saving-label">Ausführung</span>
-        <h3>Mahnwesen &amp; Zahlungsüberwachung</h3>
-        <p>Tägliche Prüfung offener Zahlungen, automatischer Mahnlauf 
-        nach definierten Regeln, individuelle Mahnbriefe und 
-        Eskalation bei Bedarf.</p>
-        <span class="uc-tag">RPA + Outlook</span>
+      <div class="story-row">
+        <h3>Zählerstände prüfen</h3>
+        <p class="before">Werte von den Fotos abtippen und mit dem Vorjahr vergleichen,
+        wenn die Zeit dafür reicht.</p>
+        <p class="after">Der Assistent liest die Werte aus dem Foto und meldet sich,
+        wenn ein Wert nicht zum Vorjahr passt. Sie bestätigen mit einem Klick.</p>
       </div>
-      <div class="uc-card">
-        <span class="uc-saving">24/7</span>
-        <span class="uc-saving-label">Verfügbarkeit</span>
-        <h3>Mieteranfragen &amp; Triage</h3>
-        <p>KI-gestützte Klassifikation eingehender E-Mails und Portalnachrichten, 
-        automatische Weiterleitung an zuständige Sachbearbeiter und 
-        erste Antwortvorschläge.</p>
-        <span class="uc-tag">Agentic AI + LLM</span>
+      <div class="story-row">
+        <h3>Abrechnen</h3>
+        <p class="before">Jede Zahl von Hand ins Excel tippen und hoffen, dass keine
+        Formel verrutscht ist.</p>
+        <p class="after">Ein Klick, und die Abrechnung entsteht nach Ihrem
+        Verteilschlüssel. Gerechnet wird mit festem Rechenweg, nicht von der KI,
+        und jede Zahl zeigt, aus welchem Beleg sie stammt.</p>
       </div>
-      <div class="uc-card">
-        <span class="uc-saving">Weniger</span>
-        <span class="uc-saving-label">Manuelle Schritte</span>
-        <h3>Mietvertragsdaten-Pflege</h3>
-        <p>Automatisches Auslesen von Vertragsdokumenten (Laufzeiten, 
-        Konditionen, Indexklauseln) und Befüllung der Verwaltungssoftware 
-        ohne manuelle Dateneingabe.</p>
-        <span class="uc-tag">IDP + RPA</span>
+      <div class="story-row">
+        <h3>Prüfen</h3>
+        <p class="before">Alles noch einmal durchgehen, weil man den eigenen
+        Tippfehlern nicht traut.</p>
+        <p class="after">Sie sehen die fertige Abrechnung, prüfen sie und geben sie
+        frei. Erst dann geht es weiter.</p>
       </div>
-      <div class="uc-card">
-        <span class="uc-saving">Mehr</span>
-        <span class="uc-saving-label">Reportinggeschwindigkeit</span>
-        <h3>KPI-Reporting &amp; Portfolioanalyse</h3>
-        <p>Automatisierte Zusammenführung von Kennzahlen aus mehreren 
-        Liegenschaften, Erstellung standardisierter Berichte und 
-        Versand an Eigentümer oder Gremien.</p>
-        <span class="uc-tag">RPA + Analytics</span>
+      <div class="story-row">
+        <h3>Zustellen</h3>
+        <p class="before">Für jede Mietpartei den Beleg ausdrucken, Einzahlungsschein
+        dazulegen, alles in den Briefkasten.</p>
+        <p class="after">Für jede Mietpartei entstehen Abrechnung, E-Mail und
+        QR-Rechnung. Sie werfen einen letzten Blick darauf, dann geht alles hinaus.</p>
       </div>
+    </div>
+    <div class="story-more">
+      <span>Nach demselben Muster lassen sich weitere Abläufe unterstützen:</span>
+      <span class="story-tag">Mieterwechsel</span>
+      <span class="story-tag">Mahnungen</span>
+      <span class="story-tag">Anfragen von Mietparteien</span>
+      <span class="story-tag">Vertragsfristen</span>
     </div>
   </div>
 </section>
@@ -1072,15 +1091,22 @@
       <p class="about-text">
         Mit einem Hintergrund in Wirtschaftsinformatik, Datenplattformen und 
         Marketing Automation bringe ich technische Tiefe und unternehmerisches Denken zusammen. 
-        Meine Automatisierungsprojekte zeigen: der Unterschied liegt nicht im Werkzeug, 
+        Meine Automatisierungsprojekte zeigen: der Unterschied liegt nicht im Werkzeug,
         sondern im Verständnis für den Prozess dahinter.
+      </p>
+      <p class="about-text">
+        Den Assistenten entwickle ich im Rahmen meiner Masterarbeit an der FHNW, in einem
+        Pilotprojekt mit einer privat verwalteten Liegenschaft. Er entsteht also an echten
+        Abläufen und Unterlagen und nicht am Reissbrett.
       </p>
       <div class="about-badges">
         <span class="badge">MSc Wirtschaftsinformatik · FHNW</span>
         <span class="badge">5x Salesforce zertifiziert</span>
-        <span class="badge">Best Thesis Award</span>
+        <span class="badge">1x IBM zertifiziert</span>
+        <span class="badge">Best Thesis Award · Bachelorarbeit BFH</span>
         <span class="badge">Python · RPA · Process Mining</span>
       </div>
+      <a href="https://www.linkedin.com/in/sarah-sch%C3%BCrch" target="_blank" rel="noopener noreferrer" class="about-link">LinkedIn-Profil →</a>
     </div>
 </section>
 
@@ -1088,33 +1114,23 @@
 <section class="cta-section" id="kontakt">
   <div class="cta-inner">
     <p class="section-label" style="justify-content: center; margin-bottom: 1.5rem;">Kontakt</p>
-    <h2>Bereit, Ihre Verwaltung <em>zu transformieren?</em></h2>
+    <h2>Bereit für <em>weniger Handarbeit?</em></h2>
     <p class="lead">
-      Lassen Sie uns in einem unverbindlichen 30-Minuten-Gespräch herausfinden, 
-      wo in Ihren Prozessen das grösste Automatisierungspotenzial steckt.
+      In einem kostenlosen 30-Minuten-Gespräch finden wir heraus, welche Ihrer
+      Abläufe ein Assistent übernehmen kann und womit Sie am besten anfangen.
     </p>
     <a href="mailto:schuerch.sarah@gmail.com" class="btn-primary" style="font-size: 1rem; padding: 1rem 2.8rem;">
      Kostenloses Erstgespräch →
      </a>
-   <a href="mailto:schuerch.sarah@gmail.com" class="cta-email">schuerch.sarah@gmail.com</a>
-   <a href="https://www.linkedin.com/in/sarah-sch%C3%BCrch" target="_blank" rel="noopener noreferrer" class="cta-email" style="font-size:0.95rem; margin-top:0.5rem;">LinkedIn → Sarah Schürch</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <span class="footer-logo">Sca<span>laro</span></span>
-  <span class="footer-copy">© 2025 Scalaro · Intelligente Automatisierung für die Liegenschaftsverwaltung</span>
+  <span class="footer-copy">© 2026 Scalaro · KI-Assistent für die Liegenschaftsverwaltung</span>
+  <span class="footer-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></span>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.style.opacity = '1';
-        e.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('
+</body>
+</html>
